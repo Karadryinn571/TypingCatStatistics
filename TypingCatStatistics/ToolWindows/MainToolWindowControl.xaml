@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="TypingCatStatistics.MainToolWindowControl"
+			 x:Name="MainToolWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:imaging="clr-namespace:Microsoft.VisualStudio.Imaging;assembly=Microsoft.VisualStudio.Imaging"
+             xmlns:theming="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Imaging"
+             xmlns:util="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Utilities"
+             xmlns:catalog="clr-namespace:Microsoft.VisualStudio.Imaging;assembly=Microsoft.VisualStudio.ImageCatalog"
+             xmlns:toolkit="clr-namespace:Community.VisualStudio.Toolkit;assembly=Community.VisualStudio.Toolkit"
+             toolkit:Themes.UseVsTheme="True"
+             mc:Ignorable="d"
+             d:DesignHeight="260"
+             d:DesignWidth="350">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="_averageSpeedLabel" Text="Average speed: " Foreground="White" FontSize="15" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="_instantSpeedLabel" Text="Instant speed:" Foreground="White" FontSize="15" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"/>
+
+
+        <TextBlock x:Name="_averageSpeed" Text="0,0/0,0 char/min" Foreground="White" FontSize="15" Grid.Column="2" Grid.Row="0"/>
+        <TextBlock x:Name="_instantSpeed" Text="0,0/0,0 char/sec" Foreground="White" FontSize="15" Grid.Column="2" Grid.Row="1"/>
+
+        <TextBlock x:Name="_catIndicator" Text="A cat should be here" Foreground="White" FontSize="15" TextAlignment="Center" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3"/>
+
+        <TextBlock x:Name="_statusLabel" Text="Status: " Foreground="White" FontSize="15" Grid.Column="0" Grid.Row="3"/>
+        <TextBlock x:Name="_status" Text="Holding" Foreground="Red" FontSize="15" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2"/>
+    </Grid>
+</UserControl>

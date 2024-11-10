@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<Extern href="stdidcmd.h"/>
+	<Extern href="vsshlids.h"/>
+	<Include href="KnownImageIds.vsct"/>
+	<Include href="VSGlobals.vsct"/>
+
+	<Commands package="TypingCatStatistics">
+		<Buttons>
+			<Button guid="TypingCatStatistics" id="MainToolWindowCommand" priority="0x0100" type="Button">
+				<Parent guid="VSMainMenu" id="Tools.ExternalToolsGroup"/>
+				<Icon guid="ImageCatalogGuid" id="ToolWindow"/>
+				<CommandFlag>IconIsMoniker</CommandFlag>
+				<Strings>
+					<ButtonText>Typing Cat Statistics</ButtonText>
+					<LocCanonicalName>.Tools.MainToolWindowCommand</LocCanonicalName>
+				</Strings>
+			</Button>
+		</Buttons>
+	</Commands>
+
+	<Symbols>
+		<GuidSymbol name="TypingCatStatistics" value="{dd8fbaa9-d846-4966-b456-9bad45a1ad6f}">
+			<IDSymbol name="MainToolWindowCommand" value="0x0100"/>
+		</GuidSymbol>
+	</Symbols>
+</CommandTable>
